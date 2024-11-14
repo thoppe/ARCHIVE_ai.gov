@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="es-US">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-38cd91aea19ca6f246a",applicationID:"771604732"};;/*! For license information please see nr-loader-rum-1.272.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555:(e,t,r)=>{"use strict";r.d(t,{Vp:()=>c,fn:()=>s,x1:()=>u});var n=r(384),i=r(8122);const o={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){try{const t=c(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}function c(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function u(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.info=a[e])}},9417:(e,t,r)=>{"use strict";r.d(t,{D0:()=>g,gD:()=>h,xN:()=>p});var n=r(993);const i=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var o=r(2614),a=r(944),s=r(384),c=r(8122);const u="[data-nr-mask]",d=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},feature_flags:[],generic_events:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},harvest:{tooManyRequestsDelay:60},jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},logging:{enabled:!0,harvestTimeSeconds:10,autoStart:!0,level:n.p_.INFO},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:o.wk,inactiveMs:o.BB},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){i(t)?e.mask_selector="".concat(t,",").concat(u):""===t||null===t?e.mask_selector=u:(0,a.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){i(t)?e.block_selector+=",".concat(t):""!==t&&(0,a.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,a.R)(7,t)}},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},ssl:void 0,user_actions:{enabled:!0}}},l={},f="All configuration objects require an agent identifier!";function g(e){if(!e)throw new Error(f);if(!l[e])throw new Error("Configuration for ".concat(e," was never set"));return l[e]}function p(e,t){if(!e)throw new Error(f);l[e]=(0,c.a)(t,d());const r=(0,s.nY)(e);r&&(r.init=l[e])}function h(e,t){if(!e)throw new Error(f);var r=g(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}},3371:(e,t,r)=>{"use strict";r.d(t,{V:()=>f,f:()=>l});var n=r(8122),i=r(384),o=r(6154),a=r(9324);let s=0;const c={buildEnv:a.F3,distMethod:a.Xs,version:a.xv,originTime:o.WN},u={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,timeKeeper:void 0,obfuscator:void 0},d={};function l(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!d[e])throw new Error("Runtime for ".concat(e," was never set"));return d[e]}function f(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");d[e]={...(0,n.a)(t,u),...c},Object.hasOwnProperty.call(d[e],"harvestCount")||Object.defineProperty(d[e],"harvestCount",{get:()=>++s});const r=(0,i.nY)(e);r&&(r.runtime=d[e])}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>o,xv:()=>n});const n="1.272.0",i="PROD",o="CDN"},6154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,WN:()=>d,bv:()=>o,gm:()=>a,mw:()=>s,sb:()=>u});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s=Boolean("hidden"===a?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),u=c&&"undefined"==typeof SharedWorker,d=((()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)())},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>c,Ze:()=>l,x3:()=>u});var n=r(7836),i=r(3606),o=r(860),a=r(2646);const s={};function c(e,t){const r={staged:!1,priority:o.P[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){e&&s[e]&&(s[e].get(t)&&s[e].delete(t),g(e,t,!1),s[e].size&&f(e))}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(e="",t="feature",r=!1){if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{s[e].delete(t),g(e,t)})))}function g(e,t,r=!0){const o=e?n.ee.get(e):n.ee,s=i.i.handlers;if(!o.aborted&&o.backlog&&s){if(r){const e=o.backlog[t],r=s[t];if(r){for(let t=0;e&&t<e.length;++t)p(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof a.y&&t[0].on(e,t[1])}))}))}}o.isolatedBacklog||delete s[t],o.backlog[t]=null,o.emit("drain-"+t,[])}}function p(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],o=e[2];n.apply(i,o)}}))}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>c,ee:()=>u});var n=r(384),i=r(8990),o=r(3371),a=r(2646),s=r(5607);const c="nr@context:".concat(s.W),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.f)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=h(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=v()[s[e]];p&&p.push([f,e,r,a]);return a},get:m,listeners:h,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{s[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,c,(()=>new a.y(c))):new a.y(c)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function m(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=u)},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>o});var n=r(9908);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.d,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.d);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function o(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>o,jT:()=>n,sp:()=>i})},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,bz:()=>a});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>a,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>o});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.debug&&console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t)}r.d(t,{R:()=>n})},5284:(e,t,r)=>{"use strict";r.d(t,{t:()=>c,B:()=>s});var n=r(7836),i=r(6154);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(e={}){try{i.gm.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,sB:()=>a});var n=r(3878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.sp)("load",e,t)}function a(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>d,Zm:()=>a,bQ:()=>c,dV:()=>s,nY:()=>u,pV:()=>l});var n=r(6154),i=r(1863);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function s(){let e=a();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},2843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3434:(e,t,r)=>{"use strict";r.d(t,{YM:()=>c});var n=r(7836),i=r(5607);const o="nr@original:".concat(i.W);var a=Object.prototype.hasOwnProperty,s=!1;function c(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,o){n||(n="");const a="-"===n.charAt(0);for(let s=0;s<t.length;s++){const c=t[s],u=e[c];d(u)||(e[c]=r(u,a?c+n:n,i,c,o))}},r.flag=o,r;function r(t,r,n,s,c){return d(t)?t:(r||(r=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){u([e],r)}for(var n in e)a.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,a,d,l;try{a=this,o=[...arguments],d="function"==typeof n?n(o,a):n||{}}catch(t){u([t,"",[o,a,s],d],e)}i(r+"start",[o,a,s],d,c);try{return l=t.apply(a,o)}catch(e){throw i(r+"err",[o,a,e],d,c),e}finally{i(r+"end",[o,a,l],d,c)}}}function i(r,n,i,o){if(!s||t){var a=s;s=!0;try{e.emit(r,n,i,t,o)}catch(t){u([t,r,n,i],e)}s=a}}}function u(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function d(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}},993:(e,t,r)=>{"use strict";r.d(t,{ET:()=>o,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},o="log";n.K.logging},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>s,rs:()=>i,xV:()=>a,z_:()=>o});const n=r(860).K.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K.pageViewTiming},6344:(e,t,r)=>{"use strict";r.d(t,{G4:()=>i});var n=r(2614);r(860).K.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.g.ERROR,n.g.FULL,n.g.OFF},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>o});var n=r(7836),i=r(1687);class o{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},7603:(e,t,r)=>{"use strict";r.d(t,{j:()=>P});var n=r(860),i=r(2555),o=r(3371),a=r(9908),s=r(7836),c=r(1687),u=r(5289),d=r(6154),l=r(944),f=r(3969),g=r(384),p=r(6344);const h=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",p.G4.RECORD,p.G4.PAUSE,"log","wrapLogger"],m=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(1863),b=r(2614),y=r(993);var w=r(2646),A=r(3434);function R(e,t,r,n){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,l.R)(29);const i=function(e){return(e||s.ee).get("logger")}(e),o=(0,A.YM)(i),a=new w.y(s.P);return a.level=n.level,a.customAttributes=n.customAttributes,o.inPlace(t,[r],"wrap-logger-",a),i}function E(){const e=(0,g.pV)();h.forEach((t=>{e[t]=(...r)=>function(t,...r){let n=[];return Object.values(e.initializedAgents).forEach((e=>{e&&e.api?e.exposed&&e.api[t]&&n.push(e.api[t](...r)):(0,l.R)(38,t)})),n.length>1?n:n[0]}(t,...r)}))}const _={};function x(e,t,g=!1){t||(0,c.Ak)(e,"api");const h={};var w=s.ee.get(e),A=w.get("tracer");_[e]=b.g.OFF,w.on(p.G4.REPLAY_RUNNING,(t=>{_[e]=t}));var E="api-",x=E+"ixn-";function N(t,r,n,o){const a=(0,i.Vp)(e);return null===r?delete a.jsAttributes[t]:(0,i.x1)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),k(E,n,!0,o||null===r?"session":void 0)(t,r)}function T(){}h.log=function(e,{customAttributes:t={},level:r=y.p_.INFO}={}){(0,a.p)(f.xV,["API/log/called"],void 0,n.K.metrics,w),function(e,t,r={},i=y.p_.INFO){(0,a.p)(f.xV,["API/logging/".concat(i.toLowerCase(),"/called")],void 0,n.K.metrics,e),(0,a.p)(y.ET,[(0,v.t)(),t,r,i],void 0,n.K.logging,e)}(w,e,t,r)},h.wrapLogger=(e,t,{customAttributes:r={},level:i=y.p_.INFO}={})=>{(0,a.p)(f.xV,["API/wrapLogger/called"],void 0,n.K.metrics,w),R(w,e,t,{customAttributes:r,level:i})},m.forEach((e=>{h[e]=k(E,e,!0,"api")})),h.addPageAction=k(E,"addPageAction",!0,n.K.genericEvents),h.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,o.f)(e).customTransaction=(r||"http://custom.transaction")+t,k(E,"setPageViewName",!0)()},h.setCustomAttribute=function(e,t,r=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return N(e,t,"setCustomAttribute",r);(0,l.R)(40,typeof t)}else(0,l.R)(39,typeof e)},h.setUserId=function(e){if("string"==typeof e||null===e)return N("enduser.id",e,"setUserId",!0);(0,l.R)(41,typeof e)},h.setApplicationVersion=function(e){if("string"==typeof e||null===e)return N("application.version",e,"setApplicationVersion",!1);(0,l.R)(42,typeof e)},h.start=()=>{try{(0,a.p)(f.xV,["API/start/called"],void 0,n.K.metrics,w),w.emit("manual-start-all")}catch(e){(0,l.R)(23,e)}},h[p.G4.RECORD]=function(){(0,a.p)(f.xV,["API/recordReplay/called"],void 0,n.K.metrics,w),(0,a.p)(p.G4.RECORD,[],void 0,n.K.sessionReplay,w)},h[p.G4.PAUSE]=function(){(0,a.p)(f.xV,["API/pauseReplay/called"],void 0,n.K.metrics,w),(0,a.p)(p.G4.PAUSE,[],void 0,n.K.sessionReplay,w)},h.interaction=function(e){return(new T).get("object"==typeof e?e:{})};const S=T.prototype={createTracer:function(e,t){var r={},i=this,o="function"==typeof t;return(0,a.p)(f.xV,["API/createTracer/called"],void 0,n.K.metrics,w),g||(0,a.p)(x+"tracer",[(0,v.t)(),e,r],i,n.K.spa,w),function(){if(A.emit((o?"":"no-")+"fn-start",[(0,v.t)(),i,o],r),o)try{return t.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw A.emit("fn-err",[arguments,this,t],r),t}finally{A.emit("fn-end",[(0,v.t)()],r)}}}};function k(e,t,r,i){return function(){return(0,a.p)(f.xV,["API/"+t+"/called"],void 0,n.K.metrics,w),i&&(0,a.p)(e+t,[(0,v.t)(),...arguments],r?null:this,i,w),r?void 0:this}}function I(){r.e(296).then(r.bind(r,8778)).then((({setAPI:t})=>{t(e),(0,c.Ze)(e,"api")})).catch((e=>{(0,l.R)(27,e),w.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{S[e]=k(x,e,void 0,g?n.K.softNav:n.K.spa)})),h.setCurrentRouteName=g?k(x,"routeName",void 0,n.K.softNav):k(E,"routeName",!0,n.K.spa),h.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,a.p)(f.xV,["API/noticeError/called"],void 0,n.K.metrics,w),(0,a.p)("err",[t,(0,v.t)(),!1,r,!!_[e]],void 0,n.K.jserrors,w)},d.RI?(0,u.GG)((()=>I()),!0):I(),h}var N=r(9417),T=r(8122);const S={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},k={};var I=r(5284);const j=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let O=!1;function P(e,t={},r,n){let{init:a,info:c,loader_config:u,runtime:l={},exposed:f=!0}=t;l.loaderType=r;const p=(0,g.pV)();c||(a=p.init,c=p.info,u=p.loader_config),(0,N.xN)(e.agentIdentifier,a||{}),function(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");k[e]=(0,T.a)(t,S);const r=(0,g.nY)(e);r&&(r.loader_config=k[e])}(e.agentIdentifier,u||{}),c.jsAttributes??={},d.bv&&(c.jsAttributes.isWorker=!0),(0,i.x1)(e.agentIdentifier,c);const h=(0,N.D0)(e.agentIdentifier),m=[c.beacon,c.errorBeacon];O||(h.proxy.assets&&(j(h.proxy.assets),m.push(h.proxy.assets)),h.proxy.beacon&&m.push(h.proxy.beacon),E(),(0,g.US)("activatedFeatures",I.B),e.runSoftNavOverSpa&&=!0===h.soft_navigations.enabled&&h.feature_flags.includes("soft_nav")),l.denyList=[...h.ajax.deny_list||[],...h.ajax.block_internal?m:[]],l.ptid=e.agentIdentifier,(0,o.V)(e.agentIdentifier,l),e.ee=s.ee.get(e.agentIdentifier),void 0===e.api&&(e.api=x(e.agentIdentifier,n,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=f),O=!0}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{K:()=>n,P:()=>i});const n={ajax:"ajax",genericEvents:"generic_events",jserrors:"jserrors",logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.spa]:5,[n.ajax]:6,[n.sessionTrace]:7,[n.softNav]:8,[n.sessionReplay]:9,[n.logging]:10,[n.genericEvents]:11}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.272.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.272.0.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={296:"sha512-NE5L6U4ZgJfOGpjZF+E0EXztZ1vc6w2JIS9wUCYCquEq3rLImu1YahAsci+BPNPSNqn15uREbCKjRYJaYAru2g=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={840:0,374:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.272.0.PROD"]=self["webpackChunk:NRBA-1.272.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(944),t=i(6344),r=i(9566);class n{agentIdentifier;constructor(e=(0,r.LA)(16)){this.agentIdentifier=e}#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e(t.G4.RECORD)}pauseReplay(){return this.#e(t.G4.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}log(e,t){return this.#e("log",e,t)}wrapLogger(e,t,r){return this.#e("wrapLogger",e,t,r)}}var o=i(860),a=i(9417);const s=Object.values(o.K);function c(e){const t={};return s.forEach((r=>{t[r]=function(e,t){return!0===(0,a.gD)(t,"".concat(e,".enabled"))}(r,e)})),t}var u=i(7603);var d=i(1687),l=i(4234),f=i(5289),g=i(6154),p=i(384);const h=e=>g.RI&&!0===(0,a.gD)(e,"privacy.cookies_enabled");function m(e){return!!(0,p.dV)().o.MO&&h(e)&&!0===(0,a.gD)(e,"session_trace.enabled")}var v=i(6389);class b extends l.W{constructor(e,t,r=!0){super(e.agentIdentifier,t),this.auto=r,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===e.init[this.featureName].autoStart&&(this.auto=!1),this.auto?(0,d.Ak)(e.agentIdentifier,t):this.ee.on("manual-start-all",(0,v.J)((()=>{(0,d.Ak)(e.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator(e)})))}importAggregator(t,r={}){if(this.featAggregate||!this.auto)return;let n;this.onAggregateImported=new Promise((e=>{n=e}));const a=async()=>{let a;try{if(h(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(296).then(i.bind(i,3861));a=e(this.agentIdentifier)}}catch(t){(0,e.R)(20,t),this.ee.emit("internal-error",[t]),this.featureName===o.K.sessionReplay&&this.abortHandler?.()}try{if(t.sharedAggregator)await t.sharedAggregator;else{t.sharedAggregator=i.e(296).then(i.bind(i,5987));const{Aggregator:e}=await t.sharedAggregator;t.sharedAggregator=new e}if(!this.#t(this.featureName,a))return(0,d.Ze)(this.agentIdentifier,this.featureName),void n(!1);const{lazyFeatureLoader:e}=await i.e(296).then(i.bind(i,6103)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(t,r),n(!0)}catch(t){(0,e.R)(34,t),this.abortHandler?.(),(0,d.Ze)(this.agentIdentifier,this.featureName,!0),n(!1),this.ee&&this.ee.abort()}};g.RI?(0,f.GG)((()=>a()),!0):a()}#t(e,t){switch(e){case o.K.sessionReplay:return m(this.agentIdentifier)&&!!t;case o.K.sessionTrace:return!!t;default:return!0}}}var y=i(6630);class w extends b{static featureName=y.T;constructor(e,t=!0){super(e,y.T,t),this.importAggregator(e)}}var A=i(9908),R=i(2843),E=i(3878),_=i(782),x=i(1863);class N extends b{static featureName=_.T;constructor(e,t=!0){super(e,_.T,t),g.RI&&((0,R.u)((()=>(0,A.p)("docHidden",[(0,x.t)()],void 0,_.T,this.ee)),!0),(0,E.sp)("pagehide",(()=>(0,A.p)("winPagehide",[(0,x.t)()],void 0,_.T,this.ee))),this.importAggregator(e))}}var T=i(3969);class S extends b{static featureName=T.TZ;constructor(e,t=!0){super(e,T.TZ,t),this.importAggregator(e)}}new class extends n{constructor(t,r){super(r),g.gm?(this.features={},(0,p.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(w),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===o.K.softNav)),(0,u.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=c(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>o.P[e.featureName]-o.P[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==o.K.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===o.K.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===o.K.softNav)return;const n=function(e){switch(e){case o.K.ajax:return[o.K.jserrors];case o.K.sessionTrace:return[o.K.ajax,o.K.pageViewEvent];case o.K.sessionReplay:return[o.K.sessionTrace];case o.K.pageViewTiming:return[o.K.pageViewEvent];default:return[]}}(r.featureName).filter((e=>!(e in this.features)));n.length>0&&(0,e.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)}))}catch(t){(0,e.R)(22,t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,p.Zm)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[w,N,S],loaderType:"lite"})})()})();</script>
+	<title>Uso gubernamental de la IA - AI.gov</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Font preload -->
+	<link rel="preload" href="../../wp-content/themes/static/ai46/assets/fonts/decimal/Decimal-Book.woff2" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="../../wp-content/themes/static/ai46/assets/fonts/decimal/Decimal-Bold.woff2" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="../../wp-content/themes/static/ai46/assets/fonts/mercury/MercurySSm-Book-Pro_Web.woff2" as="font" type="font/woff" crossorigin>
+
+	<!-- Links -->
+	<link rel="canonical" href="index.html">
+	<link rel="alternate" hreflang="en-US" href="../../ai-in-gov/index.html">
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../favicon.ico" sizes="16x16">
+	<link rel="icon" type="image/png" href="../../wp-content/images/favicon-32x32.png" sizes="32x32" />
+
+	<!-- Meta -->
+	<meta name="application-name" content="AI.gov">
+	<meta name="description" content="El gobierno federal está tomando medidas drásticas para utilizar la IA de forma responsable, con el fin de hacer frente a los principales retos de la nación y, al mismo tiempo, gestionar los riesgos de la tecnología.">
+	<meta name="image" content="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai/ai-share-v2.jpg">
+
+	<meta property="og:site_name" content="AI.gov">
+	<meta property="og:locale" content="es_US">
+	<meta property="og:url" content="https://ai.gov/es/ia-en-el-gob/">
+	<meta property="og:title" content="Uso gubernamental de la IA">
+	<meta property="og:description" content="El gobierno federal está tomando medidas drásticas para utilizar la IA de forma responsable, con el fin de hacer frente a los principales retos de la nación y, al mismo tiempo, gestionar los riesgos de la tecnología.">
+	<meta property="og:image" content="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai/ai-share-v2.jpg">
+	<meta property="og:image:width" content="2000">
+	<meta property="og:image:height" content="1000">
+	<meta property="og:image:type" content="image/jpeg">
+
+	<meta name="twitter:site" content="@whitehouse">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai/ai-share-v2.jpg">
+
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@graph": [{
+				"@type": "WebPage",
+				"@id": "https:\/\/ai.gov\/es\/ia-en-el-gob\/",
+				"url": "https:\/\/ai.gov\/es\/ia-en-el-gob\/",
+				"name": "Uso gubernamental de la IA",
+				"isPartOf": {
+					"@id": "https:\/\/ai.gov\/#website"				},
+				"about": {
+					"@id": "https://www.whitehouse.gov/#organization"
+				},
+				"description": "El gobierno federal est\u00e1 tomando medidas dr\u00e1sticas para utilizar la IA de forma responsable, con el fin de hacer frente a los principales retos de la naci\u00f3n y, al mismo tiempo, gestionar los riesgos de la tecnolog\u00eda.",
+				"inLanguage": "es-US"			}, {
+				"@type": "WebSite",
+				"@id": "https:\/\/ai.gov\/#website",
+				"url": "https:\/\/ai.gov\/",
+				"name": "AI.gov",
+				"description": "",
+				"publisher": {
+					"@id": "https://www.whitehouse.gov/#organization"
+				},
+				"inLanguage": "en-US"			}, {
+				"@type": "Organization",
+				"@id": "https://www.whitehouse.gov/#organization",
+				"name": "The White House",
+				"url": "https://www.whitehouse.gov/",
+				"logo": {
+					"@type": "ImageObject",
+					"inLanguage": "en-US",
+					"@id": "https://www.whitehouse.gov/#/schema/logo/image/",
+					"url": "https://www.whitehouse.gov/wp-content/uploads/2021/01/cropped-cropped-wh_favicon.png",
+					"contentUrl": "https://www.whitehouse.gov/wp-content/uploads/2021/01/cropped-cropped-wh_favicon.png",
+					"width": 512,
+					"height": 512,
+					"caption": "The White House"
+				},
+				"image": {
+					"@id": "https://www.whitehouse.gov/#/schema/logo/image/"
+				},
+				"sameAs": ["https://www.facebook.com/WhiteHouse/", "https://twitter.com/whitehouse", "https://www.instagram.com/whitehouse/", "https://www.youtube.com/whitehouse"]
+			}]
+		}
+	</script>
+
+	<!-- Scripts and styles -->
+	<script>
+		document.createElement('main');
+		const setScrollbarWidth = () => document.documentElement.style.setProperty('--scrollbarWidth', `${window.innerWidth - document.documentElement.clientWidth}px`);
+		setScrollbarWidth();
+	</script>
+	<script src="../../wp-content/themes/static/ai46/assets/js/uswds-init.min.js%3Fver=10.1"></script>
+	<link rel="stylesheet" href="../../wp-content/themes/static/ai46/assets/css/styles.css%3Fver=10.1.css">
+
+	<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+	<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=EOP&subagency=NAIIO" id="_fed_an_ua_tag"></script>
+</head>
+
+<body>
+	<a class="usa-skipnav" href="index.html#main-content">Ir al contenido</a>
+
+	<section
+		class="usa-banner"
+		aria-label="Official website of the United States government"
+	>
+		<div class="usa-accordion">
+			<header class="usa-banner__header">
+				<div class="usa-banner__inner">
+					<div class="grid-col-auto">
+						<img
+							aria-hidden="true"
+							class="usa-banner__header-flag"
+							src="../../wp-content/themes/static/ai46/assets/img/us_flag_small.png"
+							width="16" height="11"
+							alt=""
+						/>
+					</div>
+					<div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+						<p class="usa-banner__header-text">
+							An official website of the United States government
+						</p>
+						<p class="usa-banner__header-action">Here’s how you know</p>
+					</div>
+					<button
+						type="button"
+						class="usa-accordion__button usa-banner__button"
+						aria-expanded="false"
+						aria-controls="gov-banner-default-default"
+					>
+						<span class="usa-banner__button-text">Here’s how you know</span>
+					</button>
+				</div>
+			</header>
+			<div
+				class="usa-banner__content usa-accordion__content"
+				id="gov-banner-default-default"
+			>
+				<div class="grid-row grid-gap-lg">
+					<div class="usa-banner__guidance tablet:grid-col-6">
+						<img
+							class="usa-banner__icon usa-media-block__img"
+							src="../../wp-content/themes/static/ai46/assets/img/icon-dot-gov.svg"
+							role="img"
+							alt=""
+							aria-hidden="true"
+						/>
+						<div class="usa-media-block__body">
+							<p>
+								<strong>Official websites use .gov</strong><br />A
+								<strong>.gov</strong> website belongs to an official government
+								organization in the United States.
+							</p>
+						</div>
+					</div>
+					<div class="usa-banner__guidance tablet:grid-col-6">
+						<img
+							class="usa-banner__icon usa-media-block__img"
+							src="../../wp-content/themes/static/ai46/assets/img/icon-https.svg"
+							role="img"
+							alt=""
+							aria-hidden="true"
+						/>
+						<div class="usa-media-block__body">
+							<p>
+								<strong>Secure .gov websites use HTTPS</strong><br />A
+								<strong>lock</strong> (
+								<span class="icon-lock"
+									><svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="52"
+										height="64"
+										viewBox="0 0 52 64"
+										class="usa-banner__lock-image"
+										role="img"
+										aria-labelledby="banner-lock-description-default"
+										focusable="false"
+									>
+										<title id="banner-lock-title-default">Lock</title>
+										<desc id="banner-lock-description-default">Locked padlock icon</desc>
+										<path
+											fill="#000000"
+											fill-rule="evenodd"
+											d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"
+										/>
+									</svg> </span
+								>) or <strong>https://</strong> means you’ve safely connected to
+								the .gov website. Share sensitive information only on official,
+								secure websites.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="usa-overlay"></div>
+
+	
+	<header class="usa-header usa-header--basic ai-header">
+		<div class="usa-nav-container">
+			<div class="usa-navbar">
+				<div class="usa-logo">
+					<a
+						href="../index.html"
+						class="ai-header__logo"
+						title="AI.gov Página de inicio"
+					>
+						<svg width="98" height="45" viewBox="0 0 98 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<title>AI.gov</title>
+							<path d="M12.48 25.48H20.56L19.04 14.12H18.6L12.48 25.48ZM0.6 37L0.88 35.6L4.76 34.28L19.44 8.72H23.64L27.68 34.52L31.4 35.6L31.08 37H17.32L17.56 35.72L21.76 34.72L20.8 27.6H11.36L7.68 34.4L10.64 35.72L10.36 37H0.6ZM28.5366 37L28.8166 35.6L33.5366 34.64L38.4166 11.28L34.1366 10.36L34.4566 8.96H49.2566L48.9366 10.36L44.2566 11.32L39.3366 34.68L43.5766 35.6L43.2966 37H28.5366Z" fill="#0A2458"/>
+							<path d="M50.534 37.228C49.565 37.228 49.052 36.563 49.052 35.822V35.803C49.052 35.081 49.565 34.416 50.534 34.416C51.503 34.416 52.035 35.081 52.035 35.803V35.822C52.035 36.563 51.503 37.228 50.534 37.228ZM61.0933 37.304C57.0463 37.304 54.9183 34.796 54.9183 31.585C54.9183 28.298 57.2743 25.695 61.2833 25.695C63.2213 25.695 64.7793 26.322 65.7673 27.101V28.982H65.7483C64.6083 28.146 63.1262 27.386 61.2263 27.386C58.5663 27.386 56.8753 29.134 56.8753 31.566C56.8753 33.941 58.3383 35.651 61.2073 35.651C63.6203 35.651 65.0643 34.321 65.0833 32.383H60.5803V30.825H66.9263C66.9453 31.034 66.9453 31.433 66.9453 31.661C66.9453 35.632 64.2473 37.304 61.0933 37.304ZM75.8641 37.361C72.1021 37.361 69.6321 35.1 69.6321 31.509C69.6321 27.937 72.1401 25.6 75.9021 25.6C79.6641 25.6 82.1341 27.861 82.1341 31.452C82.1341 35.024 79.6261 37.361 75.8641 37.361ZM75.8831 35.67C78.4481 35.67 80.1771 34.131 80.1771 31.49C80.1771 28.849 78.4291 27.291 75.8831 27.291C73.3181 27.291 71.5891 28.83 71.5891 31.471C71.5891 34.112 73.3181 35.67 75.8831 35.67ZM88.5732 37L84.3552 25.942H86.3882L89.9222 35.271H90.7772L94.2922 25.942H96.3062L92.1072 37H88.5732Z" fill="#0A2458"/>
+						</svg>
+					</a>
+				</div>
+				<button type="button" class="usa-menu-btn">Menú</button>
+			</div>
+			<nav aria-label="Navegación principal" class="usa-nav">
+				<button type="button" class="usa-nav__close">
+					<img src="../../wp-content/themes/static/ai46/assets/img/usa-icons/close.svg" role="img" alt="Cerrar" />
+				</button>
+				<ul class="usa-nav__primary usa-accordion">
+																																																					<li class="usa-nav__primary-item">
+							<a href="../acciones/index.html" class="usa-nav-link ai-header__link"><span>Acciones</span></a>						</li>
+																	<li class="usa-nav__primary-item">
+							<a href="index.html" class="usa-nav-link ai-header__link" aria-current="page"><span>Uso gubernamental de la IA</span></a>						</li>
+																	<li class="usa-nav__primary-item">
+							<a href="../investigacion/index.html" class="usa-nav-link ai-header__link"><span>Investigar y enseñar IA</span></a>						</li>
+																	<li class="usa-nav__primary-item">
+							<a href="../inmigrar/index.html" class="usa-nav-link ai-header__link"><span>Trae tus habilidades de IA a los EE.UU.</span></a>						</li>
+																	<li class="usa-nav__primary-item">
+							<a href="../opiniones/index.html" class="usa-nav-link ai-header__link"><span>Haz que tu voz cuente</span></a>						</li>
+																	<li class="usa-nav__primary-item">
+							<a href="../enviar/index.html" class="usa-nav-link ai-header__link ai-header__link--highlight"><span>¡Envía tu solicitud ahora!</span></a>						</li>
+																					<li class="usa-nav__primary-item">
+							<a href="../../ai-in-gov/index.html" class="usa-nav-link ai-header__link" lang="en-US" rel="alternate"><span>English</span></a>						</li>
+									</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main-content" class="main-content" aria-label="Main Content">
+
+<div class="ai-title ai-title--bg">
+	<div class="ai-title__container">
+		<div class="ai-title__main">
+			<div class="ai-title__content">
+				<h1 data-animation="block">Uso gubernamental de la IA</h1>
+				<p data-animation="block" data-animation-delay="200">El gobierno federal está tomando medidas drásticas para utilizar la IA de forma responsable, con el fin de hacer frente a los principales retos de la nación y, al mismo tiempo, gestionar los riesgos de la tecnología.</p>
+				<p data-animation="block" data-animation-delay="400">Conozca más sobre política para el uso gubernamental de IA en:</p>
+				<div class="ai-buttons" data-animation="block" data-animation-delay="400">
+					<a href="index.html#nonnationalsecurity" class="ai-button ai-button--light"><span>Seguridad no nacional</span></a>					<a href="index.html#nationalsecurity" class="ai-button ai-button--light"><span>Seguridad nacional</span></a>				</div>
+			</div>
+			<div class="ai-dots"></div>
+		</div>
+	</div>
+</div>
+
+<div class="ai-hero ai-hero--top ai-hero--bottom" id="nonnationalsecurity">
+	<div class="ai-hero__container">
+		<div class="ai-hero__main">
+			<div class="ai-hero__content">
+				<div class="ai-hero__content-center">
+					<h2 data-animation="block" data-animation-delay="800">Fomento de la gobernanza, la innovación y la gestión de riesgos en el uso que hacen los organismos de la IA</h2>
+					<p data-animation="block" data-animation-delay="1000">La Oficina de Administración y Presupuesto (OMB) ha emitido directrices para que los organismos federales refuercen el uso eficaz y adecuado de la IA, promuevan la innovación en IA y gestionen los riesgos de la IA en el Gobierno federal.</p>
+					<p data-animation="block" data-animation-delay="1000">La Oficina de Administración y Presupuesto (OMB) publicó unas directrices que exigen a los organismos que adapten sus contratos a la política de la OMB sobre el uso de la IA por parte del Gobierno, al tiempo que promueven un mercado de IA competitivo a través de adquisiciones innovadoras.</p>
+					<div class="ai-buttons" data-animation="block" data-animation-delay="1200">
+						<a href="https://www.whitehouse.gov/wp-content/uploads/2024/03/M-24-10-Advancing-Governance-Innovation-and-Risk-Management-for-Agency-Use-of-Artificial-Intelligence.pdf" class="ai-button ai-button--external ai-button--dark" rel="noopener noreferrer" target="_blank"><span>Leer la Política</span></a>						<a href="https://www.whitehouse.gov/briefing-room/statements-releases/2024/03/28/fact-sheet-vice-president-harris-announces-omb-policy-to-advance-governance-innovation-and-risk-management-in-federal-agencies-use-of-artificial-intelligence/" class="ai-button ai-button--external ai-button--light" rel="noopener noreferrer" target="_blank"><span>Hoja Informativa</span></a>						<a href="https://www.whitehouse.gov/wp-content/uploads/2024/10/M-24-18-AI-Acquisition-Memorandum.pdf" class="ai-button ai-button--external ai-button--light" rel="noopener noreferrer" target="_blank"><span>Leer la Política de Adquisiciones</span></a>					</div>
+				</div>
+			</div>
+			<div class="ai-dots"></div>
+		</div>
+		<div class="ai-hero__media">
+			<div class="ai-hero__image" data-animation="image">
+				<picture>
+					<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai/government-hero-360.webp 360w, https://ai.gov/wp-content/themes/static/ai46/assets/img/ai/government-hero.webp 640w" type="image/webp">
+					<img src="../../wp-content/themes/static/ai46/assets/img/ai/government-hero-360.jpg"
+						srcset="../../wp-content/themes/static/ai46/assets/img/ai/government-hero-360.jpg 360w, ../../wp-content/themes/static/ai46/assets/img/ai/government-hero.jpg 640w"
+						width="640" height="427"
+						loading="lazy"
+						alt="El presidente Joe Biden firma una Orden Ejecutiva que establece estándares para la seguridad de la Inteligencia Artificial (IA), el lunes 30 de octubre de 2023, en el Salón Este de la Casa Blanca."
+					/>
+				</picture>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="ai-hero ai-hero--top ai-hero--bottom ai-hero--reverse" id="nationalsecurity">
+	<div class="ai-hero__container">
+		<div class="ai-hero__main">
+			<div class="ai-hero__content">
+				<div class="ai-hero__content-center">
+					<h2 data-animation="block" data-animation-delay="600">Marco para promover la gobernanza de la IA y la gestión de riesgos en la seguridad nacional</h2>
+					<p data-animation="block" data-animation-delay="800">El Consejo de Seguridad Nacional ha publicado una guía para las agencias federales que utilizan IA en contextos de seguridad y defensa nacional para mitigar los posibles riesgos de la IA y garantizar que el uso de la IA se alinee con los valores fundamentales de nuestro país.</p>
+					<div class="ai-buttons" data-animation="block" data-animation-delay="1000">
+						<a href="../../wp-content/uploads/2024/10/NSM-Framework-to-Advance-AI-Governance-and-Risk-Management-in-National-Security.pdf" class="ai-button ai-button--dark"><span>Leer la Política</span></a>					</div>
+				</div>
+			</div>
+			<div class="ai-dots"></div>
+		</div>
+		<div class="ai-hero__media">
+			<div class="ai-hero__image" data-animation="image">
+				<picture>
+					<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai/government-hero-2-360.webp 360w, https://ai.gov/wp-content/themes/static/ai46/assets/img/ai/government-hero-2.webp 640w" type="image/webp">
+					<img src="../../wp-content/themes/static/ai46/assets/img/ai/government-hero-2-360.jpg"
+						srcset="../../wp-content/themes/static/ai46/assets/img/ai/government-hero-2-360.jpg 360w, ../../wp-content/themes/static/ai46/assets/img/ai/government-hero-2.jpg 1280w"
+						width="1280" height="960"
+						loading="lazy"
+						alt="Vice President Kamala Harris attends a meeting with Artificial Intelligence (AI) CEO’s, Cabinet members and senior advisers, Thursday, May 4, 2023, in the Roosevelt Room of the White House."
+					/>
+				</picture>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="ai-section" data-animation="custom" data-animation-threshold="10">
+	<div class="ai-section__container">
+		<div class="ai-section__heading">
+			<h2>Inventario federal de casos de uso de la IA</h2>
+		</div>
+		<div class="ai-section__content">
+			<p>El gobierno federal está aprovechando la IA para atender mejor al público en una amplia gama de casos de uso, como la atención médica, el transporte, el medio ambiente y la prestación de beneficios.</p>
+			<div class="ai-buttons">
+				<a href="../casos/index.html" class="ai-button ai-button--dark"><span>Conoce cómo los organismos utilizan la IA</span></a>			</div>
+		</div>
+	</div>
+</div>
+
+<hr class="ai-dots ai-dots--max ai-dots--md-margin">
+
+<section class="ai-content-section">
+	<div class="ai-content-section__container">
+		<div class="ai-content-section__head">
+			<h2 data-animation="block">Directores de IA</h2>
+			<p data-animation="block" data-animation-delay="200">Los directores de IA coordinan el uso de la IA en sus agencias, lo que incluye la promoción de la innovación en IA en sus agencias y la gestión de los riesgos derivados del uso de la IA en sus agencias.</p>
+		</div>
+		<div class="ai-content-section__content">
+			<div class="ai-person-cards">
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Christopher-Alvares_USDA.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Christopher-Alvares_USDA.jpg"
+			width="300"
+			loading="lazy"
+			alt="Christopher Alvares"
+		/>
+	</picture>
+	<h3>Christopher Alvares</h3>
+	<p>Departamento de Agricultura</p>
+			<p>
+							<a href="https://USDA.gov/ai" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Brian-Epley_DOC.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Brian-Epley_DOC.jpg"
+			width="300"
+			loading="lazy"
+			alt="Brian Epley"
+		/>
+	</picture>
+	<h3>Brian Epley</h3>
+	<p>Departamento de Comercio</p>
+			<p>
+							PLAN AÚN NO DISPONIBLE					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Radha-Plumb_DOD.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Radha-Plumb_DOD.jpg"
+			width="300"
+			loading="lazy"
+			alt="Radha Plumb"
+		/>
+	</picture>
+	<h3>Radha Plumb</h3>
+	<p>Departamento de Defensa</p>
+			<p>
+							<a href="https://www.ai.mil/docs/Department_of_Defense_Compliance_Plan_for_Office_of_Management_and_Budget.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Gary-Stevens_ED.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Gary-Stevens_ED.jpg"
+			width="300"
+			loading="lazy"
+			alt="Gary Stevens"
+		/>
+	</picture>
+	<h3>Gary Stevens</h3>
+	<p>Departamento de Educación</p>
+			<p>
+							<a href="https://www.ed.gov/artificial-intelligence-ai-guidance" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Helena-Fu_DOE.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Helena-Fu_DOE.jpg"
+			width="300"
+			loading="lazy"
+			alt="Helena Fu"
+		/>
+	</picture>
+	<h3>Helena Fu</h3>
+	<p>Departamento de Energía</p>
+			<p>
+							<a href="https://www.energy.gov/cio/articles/department-energy-doe-artificial-intelligence-ai-compliance-plan" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Micky-Tripathi_HHS.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Micky-Tripathi_HHS.jpg"
+			width="300"
+			loading="lazy"
+			alt="Micky Tripathi (Interino)"
+		/>
+	</picture>
+	<h3>Micky Tripathi (Interino)</h3>
+	<p>Departamento de Salud y Servicios Humanos</p>
+			<p>
+							<a href="https://www.hhs.gov/sites/default/files/hhs-ai-compliance-plan.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Eric-Hysen_DHS.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Eric-Hysen_DHS.jpg"
+			width="300"
+			loading="lazy"
+			alt="Eric Hysen"
+		/>
+	</picture>
+	<h3>Eric Hysen</h3>
+	<p>Departamento de Seguridad Nacional</p>
+			<p>
+							<a href="https://www.dhs.gov/sites/default/files/2024-09/2024_0923_cio_dhs_compliance_plan_omb_memoranda.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Vinay-Singh_HUD.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Vinay-Singh_HUD.jpg"
+			width="300"
+			loading="lazy"
+			alt="Vinay Singh"
+		/>
+	</picture>
+	<h3>Vinay Singh</h3>
+	<p>Departamento de Vivienda y Desarrollo Urbano</p>
+			<p>
+							<a href="https://www.hud.gov/ai" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/DOJ.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/DOJ.jpg"
+			width="300"
+			loading="lazy"
+			alt="Jonathan Mayer"
+		/>
+	</picture>
+	<h3>Jonathan Mayer</h3>
+	<p>Departamento de Justicia</p>
+			<p>
+							PLAN AÚN NO DISPONIBLE					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Mangala-Kuppa_DOL.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Mangala-Kuppa_DOL.jpg"
+			width="300"
+			loading="lazy"
+			alt="Mangala Kuppa"
+		/>
+	</picture>
+	<h3>Mangala Kuppa</h3>
+	<p>Departamento de Trabajo</p>
+			<p>
+							<a href="https://www.dol.gov/sites/dolgov/files/general/ai/DOL-AI-Compliance-Plan.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Matthew-Graviss_State.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Matthew-Graviss_State.jpg"
+			width="300"
+			loading="lazy"
+			alt="Matthew Graviss"
+		/>
+	</picture>
+	<h3>Matthew Graviss</h3>
+	<p>Departamento de Estado</p>
+			<p>
+							<a href="https://www.state.gov/wp-content/uploads/2024/09/DOS-Compliance-Plan-with-OMB-M-24-10-Accessible-9.23.2024.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Joan-Mooney_DOI.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Joan-Mooney_DOI.jpg"
+			width="300"
+			loading="lazy"
+			alt="Joan Mooney"
+		/>
+	</picture>
+	<h3>Joan Mooney</h3>
+	<p>Departamento del Interior</p>
+			<p>
+							<a href="https://www.doi.gov/sites/default/files/documents/2024-09/2024-doi-ai-compliance-plan-final.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Mike-Horton_DOT.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Mike-Horton_DOT.jpg"
+			width="300"
+			loading="lazy"
+			alt="Mike Horton (Interino)"
+		/>
+	</picture>
+	<h3>Mike Horton (Interino)</h3>
+	<p>Departamento de Transporte</p>
+			<p>
+							<a href="https://www.transportation.gov/sites/dot.gov/files/2024-09/USDOT_Compliance_Plan-for-OMB_Memorandum_M-24-10_%28September_2024%29.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Todd-Conklin_Treasury.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Todd-Conklin_Treasury.jpg"
+			width="300"
+			loading="lazy"
+			alt="Todd Conklin"
+		/>
+	</picture>
+	<h3>Todd Conklin</h3>
+	<p>Departamento del Tesoro</p>
+			<p>
+							<a href="https://home.treasury.gov/system/files/216/Treasury-M-24-10-Compliance-Plan.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Charles-Worthington_VA.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Charles-Worthington_VA.jpg"
+			width="300"
+			loading="lazy"
+			alt="Charles Worthington"
+		/>
+	</picture>
+	<h3>Charles Worthington</h3>
+	<p>Departamento de Asuntos de los Veteranos</p>
+			<p>
+							<a href="https://department.va.gov/ai/department-of-veterans-affairs-compliance-plan-for-omb-memorandum-m-24-10/" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Vaughn-Noga_EPA.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Vaughn-Noga_EPA.jpg"
+			width="300"
+			loading="lazy"
+			alt="Vaughn Noga"
+		/>
+	</picture>
+	<h3>Vaughn Noga</h3>
+	<p>Agencia de Protección Ambiental</p>
+			<p>
+							<a href="https://www.epa.gov/ai" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Zach-Whitman_GSA.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Zach-Whitman_GSA.jpg"
+			width="300"
+			loading="lazy"
+			alt="Zach Whitman "
+		/>
+	</picture>
+	<h3>Zach Whitman </h3>
+	<p>Administración de Servicios Generales</p>
+			<p>
+							<a href="https://www.gsa.gov/technology/government-it-initiatives/artificial-intelligence/ai-guidance-and-resources/ai-compliance-plan" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/David-Salvagnini_NASA.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/David-Salvagnini_NASA.jpg"
+			width="300"
+			loading="lazy"
+			alt="Dave Salvagnini"
+		/>
+	</picture>
+	<h3>Dave Salvagnini</h3>
+	<p>Administración Nacional de Aeronáutica y Espacio</p>
+			<p>
+							<a href="https://www.nasa.gov/wp-content/uploads/2024/09/nasa-omb-compliance-plan-20240923.pdf?emrc=d6e0b0" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Scott-Flanders_NRC.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Scott-Flanders_NRC.jpg"
+			width="300"
+			loading="lazy"
+			alt="Scott Flanders"
+		/>
+	</picture>
+	<h3>Scott Flanders</h3>
+	<p>Comisión Reguladora Nuclear</p>
+			<p>
+							<a href="https://www.nrc.gov/ai/compliance-plan.html" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Guy-Cavallo_OPM.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Guy-Cavallo_OPM.jpg"
+			width="300"
+			loading="lazy"
+			alt="Guy Cavallo (Interino)"
+		/>
+	</picture>
+	<h3>Guy Cavallo (Interino)</h3>
+	<p>Oficina de Gestión de Personal</p>
+			<p>
+							<a href="https://www.opm.gov/about-us/reports-publications/opm-compliance-plan-for-omb-memorandum-m-24-10.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/SBA.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/SBA.jpg"
+			width="300"
+			loading="lazy"
+			alt="Stephen Kucharski"
+		/>
+	</picture>
+	<h3>Stephen Kucharski</h3>
+	<p>Administración de Pequeñas Empresas</p>
+			<p>
+							PLAN AÚN NO DISPONIBLE					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Brian-Peltier_SSA.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Brian-Peltier_SSA.jpg"
+			width="300"
+			loading="lazy"
+			alt="Brian Peltier"
+		/>
+	</picture>
+	<h3>Brian Peltier</h3>
+	<p>Administración del Seguro Social</p>
+			<p>
+							<a href="https://www.ssa.gov/ai/policy/SSA%20M-24-10%20Compliance%20Plan.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Jason-Gray_USAID.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Jason-Gray_USAID.jpg"
+			width="300"
+			loading="lazy"
+			alt="Jason Gray (Interino)"
+		/>
+	</picture>
+	<h3>Jason Gray (Interino)</h3>
+	<p>Agencia de Estados Unidos para el Desarrollo Internacional</p>
+			<p>
+							<a href="https://www.usaid.gov/digital-development/ai-compliance-plan" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Dorothy-Aronson_NSF.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Dorothy-Aronson_NSF.jpg"
+			width="300"
+			loading="lazy"
+			alt="Dorothy Aronson"
+		/>
+	</picture>
+	<h3>Dorothy Aronson</h3>
+	<p>Fundación Nacional de Ciencia de Estados Unidos</p>
+			<p>
+							<a href="https://www.nsf.gov/data/AI_Inventory/Agency_Reporting_Template.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>					</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Clare-Martorana_OMB.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Clare-Martorana_OMB.jpg"
+			width="300"
+			loading="lazy"
+			alt="Clare Martorana"
+		/>
+	</picture>
+	<h3>Clare Martorana</h3>
+	<p>Presidenta, Consejo de Directores de IA</p>
+	</div>
+				<div class="ai-person-card" data-animation="block" data-animation-duration="400">
+	<picture>
+		<source srcset="https://ai.gov/wp-content/themes/static/ai46/assets/img/ai-person/Karen-Kornbluh_CAIOVC.webp 360w" type="image/webp">
+		<img src="../../wp-content/themes/static/ai46/assets/img/ai-person/Karen-Kornbluh_CAIOVC.jpg"
+			width="300"
+			loading="lazy"
+			alt="Karen Kornbluh"
+		/>
+	</picture>
+	<h3>Karen Kornbluh</h3>
+	<p>Vicepresidente, Consejo de Directores de IA</p>
+	</div>
+			</div>
+			<div class="ai-table ai-table--small" data-animation="block" data-animation-threshold="10" data-animation-duration="400">
+	<table>
+		<thead>
+			<tr>
+				<th width="50%">Agencia</th>
+				<th width="22%">CAIO</th>
+				<th width="28%">Plan de Cumplimiento</th>
+			</tr>
+		</thead>
+		<tbody>
+							<tr>
+					<td>Conferencia Administrativa de los Estados Unidos</td>
+					<td>Jeremy Graboyes</td>
+					<td>
+																					<a href="https://www.acus.gov/ai" class="ai-link--external" rel="noopener noreferrer" target="_blank">SIN USO DE IA</a>																		</td>
+				</tr>
+							<tr>
+					<td>Comisión Estadounidense de Monumentos de Batalla</td>
+					<td>Michael Conley</td>
+					<td>
+																					SIN USO DE IA																		</td>
+				</tr>
+							<tr>
+					<td>Fundación de Becas Barry Goldwater y Excelencia en la Educación</td>
+					<td>Shellby Padgett</td>
+					<td>
+																					<a href="https://goldwaterscholarship.gov/ai" class="ai-link--external" rel="noopener noreferrer" target="_blank">SIN USO DE IA</a>																		</td>
+				</tr>
+							<tr>
+					<td>Comisión de Negociación de Futuros de Productos Básicos</td>
+					<td>Ted Kaouk</td>
+					<td>
+																					<a href="https://www.cftc.gov/data" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>																		</td>
+				</tr>
+							<tr>
+					<td>Oficina para la Protección Financiera del Consumidor</td>
+					<td>Chris Chilbert</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Departamento de Vivienda y Desarrollo Urbano: Oficina del Inspector General</td>
+					<td>Winsfield Smith</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Director de Inteligencia Nacional</td>
+					<td>John Beieler</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Comisión de Igualdad de Oportunidades en el Empleo</td>
+					<td>Sivaram Ghorakavi</td>
+					<td>
+																					<a href="https://www.eeoc.gov/ai-governance" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>																		</td>
+				</tr>
+							<tr>
+					<td>Banco de Exportación e Importación de Estados Unidos</td>
+					<td>Howard Spira</td>
+					<td>
+																					<a href="https://img.exim.gov/s3fs-public/documents/EXIM%20Compliance%20Plan%20for%20OMB%20Memorandum%20M-24-10Final.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>																		</td>
+				</tr>
+							<tr>
+					<td>Corporación Federal de Seguro de Depósitos</td>
+					<td>Michael Simon</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Comisión Federal Reguladora de Energía</td>
+					<td>Mittal Desai</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Agencia Federal de Financiamiento para la Vivienda</td>
+					<td>Tracy Stephan</td>
+					<td>
+																					<a href="https://www.fhfa.gov/reports/fhfa-ai-compliance-plan/2024" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>																		</td>
+				</tr>
+							<tr>
+					<td>Autoridad Federal de Relaciones Laborales</td>
+					<td>Dave Fontaine</td>
+					<td>
+																					<a href="https://www.flra.gov/ai" class="ai-link--external" rel="noopener noreferrer" target="_blank">SIN USO DE IA</a>																		</td>
+				</tr>
+							<tr>
+					<td>Junta de Gobernadores de la Reserva Federal</td>
+					<td>Anderson Monken</td>
+					<td>
+																					<a href="https://www.federalreserve.gov/publications/files/compliance-plan-for-omb-memorandum-m-24-10-202409.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>																		</td>
+				</tr>
+							<tr>
+					<td>Junta Federal de Inversiones de Ahorro para la Jubilación</td>
+					<td>Alex Podpaly</td>
+					<td>
+																					<a href="https://www.frtib.gov/ai" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>																		</td>
+				</tr>
+							<tr>
+					<td>Comisión Federal de Comercio</td>
+					<td>Mark Gray</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Administración de Servicios Generales: Oficina del Inspector General</td>
+					<td>William English</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Instituto de Servicios de Museos y Bibliotecas</td>
+					<td>Tekquell L. Watson</td>
+					<td>
+																					<a href="https://www.imls.gov/ai" class="ai-link--external" rel="noopener noreferrer" target="_blank">SIN USO DE IA</a>																		</td>
+				</tr>
+							<tr>
+					<td>Fundación Interamericana</td>
+					<td>Duleep Sahi</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Millennium Challenge Corporation</td>
+					<td>Christopher Ice</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Fundación Morris K. Udall y Stewart L. Udall</td>
+					<td>Jerry Carter</td>
+					<td>
+																					<a href="https://udall.gov/ai" class="ai-link--external" rel="noopener noreferrer" target="_blank">SIN USO DE IA</a>																		</td>
+				</tr>
+							<tr>
+					<td>Administración Nacional de Archivos y Registros</td>
+					<td>Gulam Shakir</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Administración Nacional de Cooperativas de Crédito</td>
+					<td>Amber Gravius</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Fondo Nacional para las Artes</td>
+					<td>Jim Tunnessen</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Fondo Nacional para las Humanidades</td>
+					<td>Brett Bobley</td>
+					<td>
+																					<a href="https://www.neh.gov/ai-notice" class="ai-link--external" rel="noopener noreferrer" target="_blank">SIN USO DE IA</a>																		</td>
+				</tr>
+							<tr>
+					<td>Junta Nacional de Relaciones del Trabajo</td>
+					<td>David Gaston</td>
+					<td>
+																					SIN USO DE IA																		</td>
+				</tr>
+							<tr>
+					<td>Junta Nacional de Seguridad en el Transporte</td>
+					<td>Loren Groff</td>
+					<td>
+																					<a href="http://www.ntsb.gov/ai" class="ai-link--external" rel="noopener noreferrer" target="_blank">SIN USO DE IA</a>																		</td>
+				</tr>
+							<tr>
+					<td>Comisión de Revisión de la Seguridad y la Salud en el Trabajo</td>
+					<td>Ronald Bailey</td>
+					<td>
+																					<a href="https://www.oshrc.gov/ai/" class="ai-link--external" rel="noopener noreferrer" target="_blank">SIN USO DE IA</a>																		</td>
+				</tr>
+							<tr>
+					<td>Oficina de Reubicación de los Indios Navajo y Hopi</td>
+					<td>Diane Pratte</td>
+					<td>
+																					<a href="https://www.onhir.gov/ai/" class="ai-link--external" rel="noopener noreferrer" target="_blank">SIN USO DE IA</a>																		</td>
+				</tr>
+							<tr>
+					<td>Corporación para Garantizar los Beneficios de las Pensiones</td>
+					<td>Robert Scherer</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Presidio Trust</td>
+					<td>Tres Shepard</td>
+					<td>
+																					<a href="https://wp.presidio.gov/wp-content/uploads/2024/09/Presidio-Trust-Compliance-Plan-for-OMB-Memorandum-M-24-10-1-Accessible.pdf?_ga=2.51549481.167914719.1727105400-580155188.1723575855" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>																		</td>
+				</tr>
+							<tr>
+					<td>Junta de Supervisión de la Privacidad y las Libertades Civiles</td>
+					<td>Geoff Cohen</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Junta de Jubilación de Empleados Ferroviarios</td>
+					<td>Kathleen McGuire</td>
+					<td>
+																					<a href="https://rrb.gov/node/6248" class="ai-link--external" rel="noopener noreferrer" target="_blank">SIN USO DE IA</a>																		</td>
+				</tr>
+							<tr>
+					<td>Comisión de Bolsa y Valores</td>
+					<td>Tanushree Luke</td>
+					<td>
+																					<a href="https://www.sec.gov/ai" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>																		</td>
+				</tr>
+							<tr>
+					<td>Junta de Transporte de Superficie</td>
+					<td>Usha Naik</td>
+					<td>
+																					<a href="https://www.stb.gov/ai/" class="ai-link--external" rel="noopener noreferrer" target="_blank">SIN USO DE IA</a>																		</td>
+				</tr>
+							<tr>
+					<td>Autoridad del Valle de Tennessee</td>
+					<td>Kenneth Carnes</td>
+					<td>
+																					<a href="https://tva.com/ai" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>																		</td>
+				</tr>
+							<tr>
+					<td>Oficina de Ética Gubernamental de los EE. UU.</td>
+					<td>Ty Cooper</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Comisión de Derechos Civiles de los Estados Unidos</td>
+					<td>Michele Yorkman-Ramey</td>
+					<td>
+																					<a href="https://www.usccr.gov/compliance-plan-omb-memoranda-m-24-10" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>																		</td>
+				</tr>
+							<tr>
+					<td>Comisión de Asistencia Electoral de los Estados Unidos</td>
+					<td>Steven Daitch</td>
+					<td>
+																					<a href="https://www.eac.gov/sites/default/files/2024-09/EAC_Compliance_Plan_OMB_Memorandum_M-24-10_FINAL_508.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>																		</td>
+				</tr>
+							<tr>
+					<td>Oficina de Publicaciones del Gobierno de Estados Unidos</td>
+					<td>Sam Musa</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Corporación Financiera de Estados Unidos para el Desarrollo Internacional</td>
+					<td>Tina Donbeck</td>
+					<td>
+																					<a href="https://www.dfc.gov/ai" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>																		</td>
+				</tr>
+							<tr>
+					<td>Comisión de Comercio Internacional de los Estados Unidos</td>
+					<td>William Powers</td>
+					<td>
+																					<a href="https://www.usitc.gov/documents/ai/usitc_ai_compliance_plan.pdf" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>																		</td>
+				</tr>
+							<tr>
+					<td>Oficina del Asesor Legal Especial</td>
+					<td>James Walters</td>
+					<td>
+																					SIN USO DE IA																		</td>
+				</tr>
+							<tr>
+					<td>Cuerpo de Paz de Estados Unidos</td>
+					<td>Emily Haimowitz</td>
+					<td>
+																					PLAN AÚN NO DISPONIBLE																		</td>
+				</tr>
+							<tr>
+					<td>Agencia de Comercio y Desarrollo de Estados Unidos</td>
+					<td>Ellie Collinson</td>
+					<td>
+																					<a href="https://www.ustda.gov/ai/" class="ai-link--external" rel="noopener noreferrer" target="_blank">PLAN M-24-10</a>																		</td>
+				</tr>
+					</tbody>
+	</table>
+</div>
+		</div>
+	</div>
+</section>
+
+					<div class="ai-cta ai-cta--bottom" style="margin-bottom: calc(var(--ai-spacing) * -1);">
+				<div class="ai-cta__container">
+					<div class="ai-cta__main">
+						<div class="ai-cta__content">
+							<div class="ai-cta__heading">
+								<h2>Haz que tu voz cuente</h2>
+							</div>
+							<div class="ai-cta__message">
+								<p>La inteligencia artificial solo funciona cuando funciona para todos. Cuéntanos cómo la IA puede funcionar mejor para ti.</p>
+							</div>
+							<div class="ai-cta__action">
+								<div class="ai-buttons">
+									<a href="../opiniones/index.html" class="ai-button ai-button--light"><span>Conoce más</span></a>								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+	</main>
+
+	<footer class="usa-footer ai-footer">
+				<div class="usa-footer__primary-section">
+			<div class="grid-container">
+				<div class="grid-row grid-gap">
+					<div class="tablet:grid-col-6 desktop:grid-col-5">
+						<div class="ai-footer__description">
+							La Administración Biden-Harris está dedicada a garantizar que Estados Unidos lidere la innovación en IA segura y confiable, para aprovechar las oportunidades de la IA y al mismo tiempo mitigar sus riesgos.						</div>
+					</div>
+					<div class="tablet:grid-col-6 desktop:grid-col-7">
+						<nav class="usa-footer__nav" aria-label="Navegación pie de página">
+							<div class="grid-row grid-gap">
+																	<div class="desktop:grid-col-fill">
+										<section class="usa-footer__primary-content">
+											<ul class="usa-list usa-list--unstyled">
+																																																																																																																				<li class="usa-footer__primary-link">
+														<a href="../acciones/index.html" class="ai-footer__link">Acciones</a>													</li>
+																																						<li class="usa-footer__primary-link">
+														<a href="index.html" class="ai-footer__link">Uso gubernamental de la IA</a>													</li>
+																																						<li class="usa-footer__primary-link">
+														<a href="../investigacion/index.html" class="ai-footer__link">Investigar y enseñar IA</a>													</li>
+																																						<li class="usa-footer__primary-link">
+														<a href="../inmigrar/index.html" class="ai-footer__link">Trae tus habilidades de IA a los EE.UU.</a>													</li>
+																																						<li class="usa-footer__primary-link">
+														<a href="../opiniones/index.html" class="ai-footer__link">Haz que tu voz cuente</a>													</li>
+																																						<li class="usa-footer__primary-link">
+														<a href="../enviar/index.html" class="ai-footer__link">¡Envía tu solicitud ahora!</a>													</li>
+																							</ul>
+										</section>
+									</div>
+																<div class="desktop:grid-col-auto">
+									<section class="usa-footer__secondary-content">
+										<ul class="usa-list usa-list--unstyled">
+																																															<li class="usa-footer__secondary-link">
+													<a href="../casos/index.html" class="ai-footer__link">Inventarios federales de casos de uso de la IA</a>												</li>
+																																			<li class="usa-footer__secondary-link">
+													<a href="../aspiraciones/index.html" class="ai-footer__link">Aspiraciones de la IA</a>												</li>
+																																			<li class="usa-footer__secondary-link">
+													<a href="../naiac/index.html" class="ai-footer__link">Comité Asesor Nacional de IA</a>												</li>
+																																			<li class="usa-footer__secondary-link">
+													<a href="https://www.whitehouse.gov/es/" class="ai-footer__link ai-footer__link--external" rel="noopener noreferrer">WhiteHouse.gov</a>												</li>
+																																			<li class="usa-footer__secondary-link">
+													<a href="https://www.whitehouse.gov/es/accesibilidad/" class="ai-footer__link ai-footer__link--external" rel="noopener noreferrer">Declaración de Accesibilidad</a>												</li>
+																																																																																													</ul>
+									</section>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ai-footer__decoration">
+			<div class="ai-dots"></div>
+		</div>
+	</footer>
+
+	<script src="../../wp-content/themes/static/ai46/assets/js/uswds.min.js%3Fver=10.1" defer></script>
+	<script src="../../wp-content/themes/static/ai46/assets/js/scripts.js%3Fver=10.1" defer></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-38cd91aea19ca6f246a","applicationID":"771604732","transactionName":"YQFTNxBZXkcFUkdcW1hLchYRTF9ZS0JHVEBfBw==","queueTime":0,"applicationTime":1,"atts":"TUZQQVhDTUk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>

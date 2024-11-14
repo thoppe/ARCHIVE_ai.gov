@@ -1,0 +1,449 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS THEME CUSTOM SCRIPTS
+----------------------------------------
+*/
+(() => {
+	setScrollbarWidth(); // Set --scrollbarWidth
+
+	const videoHeros = document.querySelectorAll('.ai-hero.ai-hero--video');
+	if (videoHeros) {
+		videoHeros.forEach((hero) => {
+			const ytDiv = hero.querySelector('.ai-hero__yt');
+			if (!ytDiv) {
+				return;
+			}
+			const videoId = ytDiv.dataset.id;
+			const videoLang = ytDiv.dataset.lang;
+
+			// YouTube API Video
+			const tag = document.createElement('script');
+			tag.src = 'https://www.youtube.com/iframe_api';
+			const firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+			let ytPlayerIsReady = false;
+			let ytPlayerIsPlaying = false;
+			let ytPlayer;
+			window.onYouTubeIframeAPIReady = () => {
+				ytPlayer = new YT.Player(ytDiv, {
+					width: '640',
+					height: '390',
+					videoId: videoId,
+					playerVars: {
+						hl: videoLang,
+						rel: 0,
+						playsinline: 1,
+						modestbranding: 1,
+						muted: 1
+					},
+					events: {
+						onReady: (event) => {
+							ytPlayerIsReady = true;
+						},
+					}
+				});
+			};
+
+			const closeBtn = hero.querySelector('.ai-hero__video-close');
+			const playBtn = hero.querySelector('.ai-hero__video-play');
+
+			const play = (e) => {
+				if (ytPlayerIsPlaying) return;
+				if (e && e.stopPropagation) e.stopPropagation();
+				document.body.classList.add('ai-hero--video-playing-overlay');
+				hero.classList.add('ai-hero--video-playing');
+				if (ytPlayerIsReady) {
+					ytPlayer.playVideo();
+				}
+				if (closeBtn) {
+					closeBtn.focus();
+				}
+				ytPlayerIsPlaying = true;
+			}
+			const close = (e) => {
+				if (!ytPlayerIsPlaying) return;
+				if (e && e.stopPropagation) e.stopPropagation();
+				document.body.classList.remove('ai-hero--video-playing-overlay');
+				hero.classList.remove('ai-hero--video-playing');
+				if (ytPlayerIsReady) {
+					ytPlayer.pauseVideo();
+				}
+				if (playBtn) {
+					playBtn.focus();
+				}
+				ytPlayerIsPlaying = false;
+			}
+
+			if (closeBtn) {
+				closeBtn.addEventListener('click', close);
+			}
+			if (playBtn) {
+				playBtn.addEventListener('click', play);
+			}
+			document.addEventListener('click', (e) => {
+				let parent = e.target;
+				while (parent && ytDiv !== parent && parent.parentElement) {
+					parent = parent.parentElement;
+				}
+				if (ytDiv !== parent) {
+					close(false);
+				}
+			});
+		});
+	}
+
+	const tables = document.querySelectorAll('.ai-table');
+	if (tables) {
+		tables.forEach((div, table_index) => {
+			table = div.querySelector('table');
+			if (!table) return;
+
+			const table_id = table.id ? table.id : `ai-table-${table_index}`;
+			table.id = table_id;
+
+			// Add aria-labelled attributes and responsive labels
+			const style = document.createElement('style');
+			document.head.appendChild(style);
+			let columns = [];
+			table.querySelectorAll('thead:first-of-type tr:first-of-type th').forEach((header, column_index) => {
+				const header_id = header.id ? header.id : `${table_id}-${column_index}`;
+				header.id = header_id;
+				columns.push(header_id);
+				style.sheet.insertRule(`[aria-labelledby*="${header_id}"]::before { content: "${header.innerHTML}"; }`);
+			});
+			table.querySelectorAll('tbody tr').forEach((row) => {
+				row.querySelectorAll('td').forEach((cell, column_index) => {
+					const labelledby = cell.getAttribute('aria-labelledby') ? cell.getAttribute('aria-labelledby') + ' ' : '';
+					cell.setAttribute('aria-labelledby', `${labelledby}${columns[column_index]}`);
+				});
+			});
+
+			// Add ARIA to tables. Based on https://adrianroselli.com/2018/02/tables-css-display-properties-and-aria.html
+			table.setAttribute('role', 'table');
+			table.querySelectorAll('thead, tbody, tfoot').forEach((rowgroup) => {
+				rowgroup.setAttribute('role', 'rowgroup');
+			});
+			table.querySelectorAll('tr').forEach((row) => {
+				row.setAttribute('role', 'row');
+			});
+			table.querySelectorAll('th').forEach((header) => {
+				header.setAttribute('role', 'columnheader');
+			});
+			table.querySelectorAll('td').forEach((cell) => {
+				cell.setAttribute('role', 'cell');
+			});
+		});
+	}
+})();
+
+(() => {
+	/**
+	 * Wrapper for intersection observer
+	 *
+	 * @param {HTMLElement} node
+	 * @param {Object} opts
+	 * @returns {Promise}
+	 */
+	const observe = ( node, opts = { threshold: 50 } ) => {
+		return new Promise(( resolve, reject ) => {
+			let threshold = parseFloat( opts.threshold );
+
+			if ( isNaN( threshold ) ) {
+				threshold = 50;
+			}
+
+			threshold = Math.min( 100, Math.max( 0, threshold ) ) / 100;
+
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach( entry => {
+						if ( entry.isIntersecting ) {
+							resolve( entry );
+							observer.disconnect();
+						}
+					});
+				},
+				{
+					threshold,
+				}
+			);
+
+			observer.observe( node );
+		});
+	}
+
+	class Lines {
+		constructor( node, opts = {} ) {
+			this.node = node;
+			this.opts = {
+				delay: 1,
+				duration: null,
+				interval: 125,
+				threshold: 50,
+				...opts
+			}
+
+			this.node.classList.add( 'animated-lines' );
+
+			// this.words     = this.node.textContent.split( ' ' );
+			this.words = [];
+			this.node.childNodes.forEach( childNode => {
+				if ( Node.TEXT_NODE === childNode.nodeType ) {
+					this.words.push( ...childNode.textContent.split( ' ' ) );
+				} else {
+					this.words.push( childNode.cloneNode(true) );
+				}
+			});
+			this.wordQueue = [];
+
+			this.placeholder = document.createElement( 'span' );
+			this.placeholder.classList.add( 'animated-lines__placeholder' );
+
+			// this.node.childNodes.forEach( childNode => this.placeholder.appendChild( childNode ) );
+			this.placeholder.append( ...this.node.childNodes );
+			this.node.appendChild( this.placeholder );
+
+			this.lines = document.createElement('span');
+			this.lines.classList.add( 'animated-lines__lines' );
+			this.lines.setAttribute( 'aria-hidden', true );
+			this.node.appendChild( this.lines );
+
+			observe( this.node, { threshold: this.opts.threshold } ).then( () => {
+				const prepareStart = Date.now();
+				this.prepare().then( () => {
+					const prepareEnd = Date.now();
+					const delay = Math.max( this.opts.delay - ( prepareEnd - prepareStart ), 0 );
+					setTimeout( () => this.animate(), delay );
+				} );
+			} );
+		}
+
+		lineItems() {
+			return this.node.querySelectorAll('.animated-lines__line');
+		}
+
+		prepare() {
+			const wordQueue = [ ...this.words ];
+
+			// empty the lines node
+			while ( this.lines.firstChild ) {
+				this.lines.removeChild( this.lines.firstChild );
+			}
+
+			const processWords = () => {
+				return new Promise(( resolve, reject ) => {
+					const word = wordQueue.shift();
+
+					let wordNode;
+					if ( 'string' === typeof word ) {
+						wordNode = document.createElement( 'span' );
+						wordNode.classList.add( 'animated-lines__word' );
+						wordNode.appendChild( document.createTextNode( word ) );
+					} else {
+						wordNode = word;
+					}
+
+					// add a slight delay to the measurements so they're more accurate
+					setTimeout( () => {
+						if ( ! this.lines.lastElementChild ) {
+							this.appendLine();
+						}
+
+						this.lines.lastElementChild.appendChild( document.createTextNode( ' ' ) );
+						this.lines.lastElementChild.appendChild( wordNode );
+
+						// append each word to a 'line' and if the offsetTop doesn't match the previous word, move it to the next 'line'
+						if ( wordNode.offsetParent
+							&& (
+								wordNode.offsetLeft + wordNode.offsetWidth > wordNode.offsetParent.offsetWidth
+								|| wordNode.offsetTop > wordNode.offsetParent.offsetTop
+							)
+						) {
+						// if ( wordNode.offsetParent && wordNode.offsetLeft + wordNode.offsetWidth > wordNode.offsetParent.offsetWidth ) {
+							this.appendLine();
+							this.lines.lastElementChild.appendChild( wordNode );
+						}
+
+						if ( wordQueue.length ) {
+							resolve( processWords() );
+						} else {
+							resolve();
+						}
+					}, 1);
+				});
+			}
+
+			return processWords();
+		}
+
+		appendLine() {
+			const newLine = document.createElement( 'span' );
+			newLine.classList.add( 'animated-lines__line' );
+			if ( this.opts.duration ) {
+				newLine.style.animationDuration = this.opts.duration + 'ms';
+			}
+			this.lines.appendChild( newLine );
+		}
+
+		reset() {
+			const linesNode = this.node.querySelector( '.animated-lines__lines' );
+
+			if ( linesNode ) {
+				linesNode.parentNode.removeChild( linesNode );
+			}
+
+			if ( this.placeholder && this.placeholder.parentNode ) {
+				this.node.append( ...this.placeholder.childNodes );
+				// this.placeholder.childNodes.forEach( childNode => this.node.appendChild( childNode.cloneNode() ) );
+				this.placeholder.parentNode.removeChild( this.placeholder );
+			}
+
+			this.node.classList.remove( 'animated-lines' );
+
+			return this;
+		}
+
+		animate() {
+			return new Promise( ( resolve ) => {
+				this.lineItems().forEach( ( line, lineIndex, lines ) => {
+					setTimeout(
+						() => {
+							line.classList.add( 'animated-lines__line--active' );
+
+							if ( lineIndex === lines.length - 1 ) {
+								let duration = this.opts.duration;
+
+								if ( ! duration ) {
+									duration = parseFloat( getComputedStyle( line ).animationDuration ) * 1000;
+								}
+
+								setTimeout( () => resolve( this.reset() ), duration * 2 );
+							}
+						},
+						// this.opts.interval * ( lineIndex + 1 )
+						this.opts.interval * lineIndex
+					);
+				} );
+			});
+		}
+	}
+
+	class Block {
+		constructor( node, opts = {} ) {
+			this.node = node;
+			this.opts = {
+				delay: 1,
+				duration: null,
+				threshold: 50,
+				...opts
+			}
+
+			this.node.classList.add( 'animated-block' );
+
+			if ( this.opts.duration ) {
+				this.node.style.animationDuration = this.opts.duration + 'ms';
+			}
+
+			observe( this.node, { threshold: this.opts.threshold } ).then( () => {
+				setTimeout( () => node.classList.add('animated-block--active'), this.opts.delay );
+			} );
+		}
+	}
+
+	class Image {
+		constructor( node, opts = {} ) {
+			this.node = node;
+			this.opts = {
+				delay: 1,
+				duration: null,
+				threshold: 50,
+				...opts
+			}
+
+			this.node.classList.add( 'animated-image' );
+
+			this.wash = this.node.querySelector( '.animated-image__wash' );
+			if ( ! this.wash ) {
+				this.wash = document.createElement( 'div' );
+				this.wash.classList.add( 'animated-image__wash' );
+				this.node.appendChild( this.wash );
+			}
+
+			if ( this.opts.duration ) {
+				this.node.style.animationDuration = this.opts.duration + 'ms';
+				this.wash.style.animationDuration = Math.ceil( this.opts.duration * 0.5 ) + 'ms';
+				this.wash.style.animationDelay = Math.ceil( this.opts.duration * 0.375 ) + 'ms';
+			}
+
+			observe( this.node, { threshold: this.opts.threshold } ).then( () => {
+				setTimeout( () => node.classList.add('animated-image--active'), this.opts.delay );
+			} );
+		}
+	}
+
+	class Custom {
+		constructor( node, opts = {} ) {
+			this.node = node;
+			this.opts = {
+				delay: 1,
+				duration: null,
+				threshold: 50,
+				...opts
+			}
+
+			this.node.classList.add( 'animated-custom' );
+
+			if ( this.opts.duration ) {
+				node.style.animationDuration = this.opts.duration + 'ms';
+			}
+
+			observe( this.node, { threshold: this.opts.threshold } ).then( () => {
+				setTimeout( () => node.classList.add('animated-custom--active'), this.opts.delay );
+			} );
+		}
+	}
+
+	const nodes = document.querySelectorAll( '[data-animation]' );
+	if ( nodes ) {
+		nodes.forEach( node => {
+			const type = node.dataset['animation'];
+
+			opts = {};
+			if ( node.dataset['animationDelay'] && ! isNaN( parseFloat( node.dataset['animationDelay'] ) ) ) {
+				opts.delay = parseFloat( node.dataset['animationDelay'] );
+			}
+			if ( node.dataset['animationDuration'] && ! isNaN( parseFloat( node.dataset['animationDuration'] ) ) ) {
+				opts.duration = parseFloat( node.dataset['animationDuration'] );
+			}
+			if ( node.dataset['animationInterval'] && ! isNaN( parseFloat( node.dataset['animationInterval'] ) ) ) {
+				opts.interval = parseFloat( node.dataset['animationInterval'] );
+			}
+			if ( node.dataset['animationThreshold'] && ! isNaN( parseFloat( node.dataset['animationThreshold'] ) ) ) {
+				opts.threshold = parseFloat( node.dataset['animationThreshold'] );
+			}
+
+			switch ( type ) {
+				case 'lines':
+					new Lines( node, opts );
+					break;
+				case 'block':
+					new Block( node, opts );
+					break;
+				case 'image':
+					new Image( node, opts );
+					break;
+				case 'custom':
+						new Custom( node, opts );
+						break;
+			}
+		});
+	}
+})();
